@@ -1,0 +1,158 @@
+.bar {
+	background-color: $bg;
+	padding: 5px 25px 5px 25px;
+}
+
+scale trough {
+	all: unset;
+	background-color: $black;
+	border-radius: 16px;
+	min-height: 5px;
+	min-width: 80px;
+	margin-left: 5px;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.group {
+	background-color: $bg-alt;
+	padding: 8px 15px 8px 15px;
+	border-radius: 8px;
+}
+
+.power-icon,
+.pacman-icon,
+.network-icon,
+.volume-icon {
+	font-size: 18px;
+	font-family: "Font Awesome 6 Pro Solid";
+}
+
+.pacman-text,
+.network-text,
+.memory-info,
+.cpu-info {
+	font-family: "SF Pro Text";
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.power-icon {
+	color: $red;
+	padding-right: 2px;
+	margin-top: 2px;
+}
+
+.workspaces {
+	font-family: "Font Awesome 6 Pro Solid";
+	font-size: 18px;
+	background-color: $bg-alt;
+	padding: 8px 15px 8px 15px;
+	border-radius: 8px;
+}
+
+.occupied-active {
+	color: $green;
+}
+
+.occupied-inactive {
+	color: rgba($fg, 0.3);
+}
+
+.empty-inactive {
+	color: rgba($fg, 0.1);
+}
+
+.empty-active {
+	color: $green;
+}
+
+.memory-inside,
+.cpu-inside {
+	padding: 10px;
+}
+
+.memory-bar {
+	color: $magenta;
+	background-color: $black;
+}
+
+.cpu-bar {
+	color: $red;
+	background-color: $black;
+}
+
+.pacman-icon {
+	color: $yellow;
+}
+
+.pacman-text {
+	color: $fg;
+	margin-left: 5px;
+}
+
+.volume-bar trough highlight {
+	background: $green;
+	border-radius: 16px;
+}
+
+.network-text {
+	color: $fg;
+	margin-left: 5px;
+}
+
+.clock {
+	font-family: "SF Mono";
+}
+
+.clock-hour {
+	font-size: 19px;
+	font-weight: bold;
+	color: $fg;
+}
+
+.clock-minute {
+	font-size: 19px;
+	color: $fg-alt;
+	margin-left: -1px;
+}
+
+.clock-separator {
+	font-size: 19px;
+	color: $fg-alt;
+	margin-top: 1.4px;
+}
+
+.musicbar-art {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-width: 35px;
+	border-radius: 100px;
+}
+
+.musicbar-title {
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "SF Pro";
+	color: $fg;
+}
+
+.musicbar-toggle-icon {
+	font-size: 20px;
+}
+
+.musicbar-previous-icon,
+.musicbar-next-icon {
+	font-size: 15px;
+}
+
+.musicbar-previous-icon,
+.musicbar-next-icon,
+.musicbar-toggle-icon {
+	font-family: "Font Awesome 6 Pro Solid";
+	color: $fg;
+
+	&:hover {
+		color: $magenta;
+	}
+}

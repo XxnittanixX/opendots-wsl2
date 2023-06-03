@@ -1,0 +1,104 @@
+.powermenu-box {
+	background: rgba($bg, 0.95);
+	padding: 80px;
+}
+
+.power-profile-box {
+	margin-left: -50px;
+}
+
+.power-profile-img {
+	border-radius: 25px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 200px;
+	min-width: 200px;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.power-profile-info {
+	font-family: "SF Pro";
+	color: $fg;
+}
+
+.power-profile-name {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.power-profile-infos {
+	font-size: 20px;
+}
+
+.power-weather-desc {
+	font-family: "SF Pro";
+	font-size: 20px;
+	color: $fg-alt;
+}
+
+.power-weather-temp {
+	font-family: "SF Pro";
+	font-size: 25px;
+	font-weight: bolder;
+	color: $fg;
+}
+
+.power-weather-icon {
+	font-family: "Font Awesome 6 Pro Solid";
+	font-size: 45px;
+}
+
+.buttons-box {
+	font-family: "Font Awesome 6 Pro Solid";
+	font-size: 25px;
+}
+
+.shutdown {
+	color: $red;
+}
+
+.reboot {
+	color: $green;
+}
+
+.exit {
+	color: $blue;
+}
+
+.suspend {
+	color: $magenta;
+}
+
+.reboot,
+.shutdown,
+.exit,
+.lock,
+.suspend {
+	font-family: "Font Awesome 6 Pro Solid";
+	font-size: 80px;
+	border-radius: 25px;
+	padding: 20px;
+	min-width: 140px;
+	min-height: 140px;
+	background-color: $bg-alt;
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+
+	&:hover {
+		transition: 200ms linear background-color, border-radius;
+		background-color: $black;
+	}
+}
+
+.powermenu-close {
+	font-family: "Font Awesome 6 Pro Solid";
+	font-size: 40px;
+	color: rgba($red, 0.8);
+	box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+	border-radius: 100px;
+	margin-top: -20px;
+
+	&:hover {
+		color: $red;
+	}
+}

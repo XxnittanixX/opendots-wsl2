@@ -1,0 +1,153 @@
+(defwidget powermenu []
+	(box 
+		:class "powermenu-box" 
+		:space-evenly false
+		(box
+			:valign "start"
+			(button
+				:class "powermenu-close"
+				:tooltip "close"
+				:onclick "eww close powermenu"
+				""
+			)
+		)
+		(box 
+			:class "power-profile-box" 
+			:space-evenly false 
+			:orientation "v"
+			:valign "start"
+			:halign "center"
+			:hexpand true
+			:spacing 50
+			(box
+				:class "power-today"
+				:orientation "v"
+				:halign "center"
+				:valign "start"
+				:hexpand true
+				(box 
+					:space-evenly false 
+					:spacing 10
+					(label 
+						:class "time" 
+						:text hour
+					)
+					(box 
+						:class "timeboxes" 
+						:space-evenly false 
+						:valign "center" 
+						:orientation "v" 
+						:spacing 5
+						(box 
+							:class "timebox magenta" 
+							"󰝤"
+						)
+						(box 
+							:class "timebox green" 
+							"󰝤"
+						)
+						(box 
+							:class "timebox yellow" 
+							"󰝤"
+						)
+					)
+					(label 
+						:class "time" 
+						:text minute
+					)
+				)
+				(box 
+					:class "power-weather-box"
+					(box 
+						:space-evenly false 
+						:orientation "v"
+						(label 
+							:class "power-weather-desc" 
+							:halign "start" 
+							:text weather-desc
+						)
+						(label 
+							:class "power-weather-temp" 
+							:halign "start" 
+							:text "${weather-temp}°C"
+						)
+					)
+					(box 
+						:hexpand true
+						:vexpand true
+						(label 
+							:class "power-weather-icon" 
+							:halign "end" 
+							:valign "center" 
+							:text weather-icon 
+							:style "color: ${weather-color}"
+						)
+					)
+				)
+			)
+			(box
+				:space-evenly false
+				:spacing 20
+				:orientation "v"
+				:vexpand true
+				:hexpand true
+				(box
+					:space-evenly false
+					:halign "center"
+					(box 
+						:class "power-profile-img" 
+						:style "background-image: url('${profile-image}');"
+					)
+				)
+				(box 
+					:class "power-profile-info" 
+					:space-evenly false 
+					:orientation "v" 
+					:spacing 5
+					(label 
+						:class "power-profile-name" 
+						:text profile-name 
+						:halign "center"
+					)
+					(label 
+						:class "power-profile-infos" 
+						:text uptime 
+						:halign "center"
+					)
+				)
+			)
+			(box 
+				:class "buttons-box"
+				:spacing 50 
+				(button 
+					:class "shutdown" 
+					:onclick "systemctl poweroff -i" 
+					""
+				)
+				(button 
+					:class "reboot" 
+					:onclick "systemctl reboot -i" 
+					""
+				)
+				(button 
+					:class "suspend" 
+					:onclick "systemctl suspend" 
+					""
+				)
+				(button 
+					:class "exit" 
+					:onclick "openbox --exit" 
+					""
+				)
+			)
+		)
+	)
+)
+
+(defwindow powermenu
+	:stacking "fg" 
+	:wm-ignore true
+	:windowtype "normal"
+	:geometry (geometry :width "100%" :height "100%")
+	(powermenu)
+)
